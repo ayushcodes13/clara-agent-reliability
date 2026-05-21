@@ -1,0 +1,635 @@
+[
+  {
+    "id": "prod_001",
+    "name": "Clinikally The Ultimate NIA (10% Niacinamide) Serum",
+    "category": "skin_care",
+    "product_type": "serum",
+    "use_cases": [
+      "acne marks",
+      "oil control",
+      "hyperpigmentation",
+      "redness"
+    ],
+    "description": "A niacinamide-based serum for oily, acne-prone, and sensitive skin.",
+    "claims": [
+      "May help reduce blemishes",
+      "May improve uneven skin tone",
+      "May support oil control",
+      "May support skin barrier function"
+    ],
+    "ingredients": [
+      "Niacinamide",
+      "Zinc PCA",
+      "Ceramide 3",
+      "Centella Asiatica Extract",
+      "Licorice Extract",
+      "Tranexamic Acid"
+    ],
+    "risk_factors": [
+      "May cause irritation in sensitive skin",
+      "Patch test recommended"
+    ],
+    "contraindications": [],
+    "evidence_level": "medium",
+    "requires_doctor_review": false,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_002",
+    "name": "Clinikally HydraSoft Gentle Skin Cleanser",
+    "category": "skin_care",
+    "product_type": "cleanser",
+    "use_cases": [
+      "daily cleansing",
+      "dry skin",
+      "sensitive skin irritation"
+    ],
+    "description": "A gentle, non-drying lotion cleanser for removing impurities without disrupting the skin's moisture barrier.",
+    "claims": [
+      "May help cleanse without drying",
+      "May support skin barrier moisture",
+      "May temporarily soothe minor irritation"
+    ],
+    "ingredients": [
+      "Aqua",
+      "Glycerin",
+      "Cetearyl Alcohol",
+      "Propanediol",
+      "Sodium Cocoyl Isethionate",
+      "Aloe Barbadensis (Aloe Vera) Extract",
+      "Niacinamide",
+      "Panthenol",
+      "Citric Acid"
+    ],
+    "risk_factors": [
+      "Avoid direct contact with eyes"
+    ],
+    "contraindications": [],
+    "evidence_level": "medium",
+    "requires_doctor_review": false,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_003",
+    "name": "Clinikally SunProtect Sunscreen SPF 50/PA+++",
+    "category": "skin_care",
+    "product_type": "sunscreen",
+    "use_cases": [
+      "sun protection",
+      "photo-aging prevention"
+    ],
+    "description": "A broad-spectrum non-comedogenic sunscreen providing complete defense against UVA/UVB rays, Infrared Radiation, and Blue Light.",
+    "claims": [
+      "Provides broad-spectrum UV protection",
+      "May assist in preventing sun-induced aging changes",
+      "Formulated to reduce risk of clogging pores"
+    ],
+    "ingredients": [
+      "Aqua",
+      "Ethylhexyl Methoxycinnamate",
+      "Butyl Methoxydibenzoylmethane",
+      "Benzophenone-3",
+      "Phospholipids",
+      "Ceramide 3",
+      "Camellia Sinensis Leaf Extract",
+      "Tocopheryl Acetate (Vitamin E)"
+    ],
+    "risk_factors": [
+      "Contains Benzophenone-3",
+      "Requires regular reapplication every 2 hours under physical outdoor stress"
+    ],
+    "contraindications": [],
+    "evidence_level": "high",
+    "requires_doctor_review": false,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_004",
+    "name": "Clinikally Hair ReGrow Serum",
+    "category": "hair_care",
+    "product_type": "hair_serum",
+    "use_cases": [
+      "hair thinning",
+      "hair fall management"
+    ],
+    "description": "A topical hair formulation targeting hair thinning and structural follicle management.",
+    "claims": [
+      "May support hair retention",
+      "May assist in managing daily hair fall",
+      "May support follicle conditioning"
+    ],
+    "ingredients": [
+      "Aqua",
+      "Pisum Sativum Sprout Extract",
+      "Apigenin",
+      "Serenoa Serrulata Extract",
+      "Amino Acids",
+      "Hydrolyzed Keratin",
+      "Wheat Germ Oil"
+    ],
+    "risk_factors": [
+      "May cause localized scalp itching or redness in rare instances"
+    ],
+    "contraindications": [
+      "Not recommended during pregnancy or nursing without explicit medical clearance"
+    ],
+    "evidence_level": "medium",
+    "requires_doctor_review": true,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_005",
+    "name": "UVSkrin SS Silicone Sunscreen Gel SPF 50+",
+    "category": "skin_care",
+    "product_type": "sunscreen",
+    "use_cases": [
+      "sun protection",
+      "oil control"
+    ],
+    "description": "A silicone-based sunscreen gel designed for a matte finish and UV protection.",
+    "claims": [
+      "Provides UVA and UVB defense",
+      "Offers a matte, non-greasy surface layer"
+    ],
+    "ingredients": [
+      "Octinoxate",
+      "Titanium Dioxide",
+      "Silica",
+      "Dimethicone",
+      "Diethylhexyl Butamido Triazone",
+      "Cyclopentasiloxane",
+      "Bemotrizinol"
+    ],
+    "risk_factors": [
+      "May cause mild congestion or breakouts in profiles sensitive to heavy silicones"
+    ],
+    "contraindications": [],
+    "evidence_level": "high",
+    "requires_doctor_review": false,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_006",
+    "name": "DERMATICA RAY: Protect Barelyon Fluid Sunscreen SPF 50",
+    "category": "skin_care",
+    "product_type": "sunscreen",
+    "use_cases": [
+      "sun protection",
+      "daily wear"
+    ],
+    "description": "A fluid sunscreen formulated to protect against UVA, UVB, and environmental radiation stressors.",
+    "claims": [
+      "Provides broad-spectrum UV protection",
+      "Lightweight fluid texture suitable as a smooth base"
+    ],
+    "ingredients": [
+      "Ethylhexyl Methoxycinnamate",
+      "Butyl Methoxydibenzoylmethane",
+      "Benzophenone-3",
+      "Titanium dioxide"
+    ],
+    "risk_factors": [
+      "May cause mild skin dryness or tightening over extended wear"
+    ],
+    "contraindications": [],
+    "evidence_level": "high",
+    "requires_doctor_review": false,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_007",
+    "name": "Puerile Foaming Cleanser",
+    "category": "skin_care",
+    "product_type": "cleanser",
+    "use_cases": [
+      "daily cleansing",
+      "sensitive skin"
+    ],
+    "description": "A mild, sulfate-free daily face wash designed to clear surface impurities.",
+    "claims": [
+      "Gently cleanses surface dirt and excess oils",
+      "Helps preserve baseline epidermal hydration"
+    ],
+    "ingredients": [
+      "Purified Water",
+      "Cocamidopropyl Betaine",
+      "Decyl Glucoside",
+      "Glycerine",
+      "Avena Sativa (Oatmeal) Extract",
+      "Sodium Lactate",
+      "D-Panthenol",
+      "Lactic Acid"
+    ],
+    "risk_factors": [
+      "Discontinue if baseline hypersensitivity or stinging arises"
+    ],
+    "contraindications": [],
+    "evidence_level": "medium",
+    "requires_doctor_review": false,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_008",
+    "name": "Cestia Gentle Skin Cleanser",
+    "category": "skin_care",
+    "product_type": "cleanser",
+    "use_cases": [
+      "daily cleansing",
+      "sensitive skin"
+    ],
+    "description": "A soap-free, fatty-alcohol based cleanser formulated for highly reactive or dry skin profiles.",
+    "claims": [
+      "Cleanses without soap-induced irritation",
+      "Assists in maintaining essential skin lipid levels"
+    ],
+    "ingredients": [
+      "Cetyl Alcohol",
+      "Propylene Glycol",
+      "Sodium Sulphate",
+      "Stearyl Alcohol",
+      "Polysorbate 20",
+      "Methyl Paraben"
+    ],
+    "risk_factors": [
+      "Contains parabens which may cause contact reactions in individuals sensitized to preservatives"
+    ],
+    "contraindications": [],
+    "evidence_level": "medium",
+    "requires_doctor_review": false,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_009",
+    "name": "Cetaphil Gentle Skin Cleanser (Dry to Normal, Sensitive Skin)",
+    "category": "skin_care",
+    "product_type": "cleanser",
+    "use_cases": [
+      "dry skin",
+      "sensitive skin",
+      "barrier support"
+    ],
+    "description": "A soap-free, non-irritating daily formula designed to cleanse while keeping skin hydrated.",
+    "claims": [
+      "Cleanses while preserving natural skin hydration limits",
+      "Helps manage visible signs of skin sensitivity like dryness or roughness"
+    ],
+    "ingredients": [
+      "Aqua",
+      "Glycerin",
+      "Citric Acid"
+    ],
+    "risk_factors": [
+      "Requires appropriate rinsing or clean wiping to prevent residue buildup"
+    ],
+    "contraindications": [],
+    "evidence_level": "high",
+    "requires_doctor_review": false,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_010",
+    "name": "Aczit 12% Niacinamide Face Serum",
+    "category": "skin_care",
+    "product_type": "serum",
+    "use_cases": [
+      "oil control",
+      "blemish care",
+      "hyperpigmentation"
+    ],
+    "description": "A concentrated niacinamide serum optimized for managing excess sebum production and surface marks.",
+    "claims": [
+      "May support blemish management",
+      "Assists in controlling surface sebum shine",
+      "Helps visually brighten minor skin discoloration"
+    ],
+    "ingredients": [
+      "Niacinamide",
+      "Potassium Azeloyl Diglycinate (PAD)",
+      "Licorice Liquid Extract",
+      "Green Tea Liquid Extract",
+      "Sodium Hyaluronate",
+      "Glycerin"
+    ],
+    "risk_factors": [
+      "High level of active ingredients; initial patch test is recommended before applying over full face"
+    ],
+    "contraindications": [],
+    "evidence_level": "medium",
+    "requires_doctor_review": false,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_011",
+    "name": "The CuraTeam Go-Clear Anti Acne Serum",
+    "category": "skin_care",
+    "product_type": "serum",
+    "use_cases": [
+      "active breakouts",
+      "exfoliation",
+      "clogged pores"
+    ],
+    "description": "A chemically exfoliating nighttime facial serum containing Salicylic Acid and Azelaic Acid.",
+    "claims": [
+      "Assists in exfoliating dead skin cells",
+      "Helps clear and unclog pores",
+      "May support managing breakout-prone skin surfaces"
+    ],
+    "ingredients": [
+      "Salicylic Acid",
+      "Azelaic Acid",
+      "Niacinamide",
+      "Citrus Limon Extract",
+      "Glycerin",
+      "Propylene Glycol"
+    ],
+    "risk_factors": [
+      "May cause transient stinging, redness, or localized skin peeling",
+      "Mandatory broad-spectrum sunscreen use during daylight hours due to acid exfoliation"
+    ],
+    "contraindications": [
+      "Do not use on severely broken, raw, or actively infected skin barriers"
+    ],
+    "evidence_level": "medium",
+    "requires_doctor_review": true,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_012",
+    "name": "Agelite-X Vitamin C Serum",
+    "category": "skin_care",
+    "product_type": "serum",
+    "use_cases": [
+      "brightening",
+      "dullness",
+      "antioxidant support"
+    ],
+    "description": "An antioxidant facial serum formulated with a stable derivative of Vitamin C and Ferulic Acid.",
+    "claims": [
+      "Provides topical antioxidant protection",
+      "May support a brighter skin appearance",
+      "May assist in improving visible skin texture"
+    ],
+    "ingredients": [
+      "Vitamin C (Ethyl Ascorbic Acid)",
+      "Ferulic Acid",
+      "Hyaluronic Acid",
+      "Vitamin E Acetate"
+    ],
+    "risk_factors": [
+      "Contains added perfume which may trigger sensitivity in reactive skin profiles"
+    ],
+    "contraindications": [],
+    "evidence_level": "medium",
+    "requires_doctor_review": false,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_013",
+    "name": "Cliface Bio Oil Free Moisturizer Gel",
+    "category": "skin_care",
+    "product_type": "moisturizer",
+    "use_cases": [
+      "oily skin hydration",
+      "clogged pores avoidance"
+    ],
+    "description": "A fragrance-free, oil-free gel moisturizer designed to deliver hydration to oily and breakout-prone configurations.",
+    "claims": [
+      "Delivers lightweight hydration without adding excess surface oil",
+      "Helps manage surface shine with Zinc PCA"
+    ],
+    "ingredients": [
+      "Aloe Vera Extract",
+      "Zinc PCA",
+      "Pentavitin",
+      "Witch Hazel Extract",
+      "Alpha-Glucan Oligosaccharide",
+      "Sodium Hyaluronate",
+      "Niacinamide"
+    ],
+    "risk_factors": [
+      "May provide insufficient hydration layers for extremely dry skin types"
+    ],
+    "contraindications": [],
+    "evidence_level": "medium",
+    "requires_doctor_review": false,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_014",
+    "name": "Cetaphil Restoraderm Skin Restoring Body Moisturizer",
+    "category": "skin_care",
+    "product_type": "moisturizer",
+    "use_cases": [
+      "very dry skin",
+      "atopic skin tendencies",
+      "barrier replenishment"
+    ],
+    "description": "A deeply hydrating body lotion engineered for compromised, dry, and intensely uncomfortable skin profiles.",
+    "claims": [
+      "Provides prolonged hydration to dry outer skin layers",
+      "Assists in conditioning a fragile skin moisture barrier",
+      "Helps alleviate discomfort associated with severe skin dryness"
+    ],
+    "ingredients": [
+      "Glycerin",
+      "Helianthus Annuus Seed Oil",
+      "Pentylene Glycol",
+      "Butyrospermum Parkii Butter",
+      "Niacinamide",
+      "Allantoin",
+      "Panthenol",
+      "Sodium Hyaluronate"
+    ],
+    "risk_factors": [
+      "For external body use; avoid contact with mucous membranes"
+    ],
+    "contraindications": [],
+    "evidence_level": "medium",
+    "requires_doctor_review": true,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_015",
+    "name": "Clinikally Hyaluronic SkinBooster Serum",
+    "category": "skin_care",
+    "product_type": "serum",
+    "use_cases": [
+      "dehydration",
+      "fine lines",
+      "skin plumping"
+    ],
+    "description": "A hydration-focused topical serum designed to lock moisture into the epidermis.",
+    "claims": [
+      "Provides immediate surface hydration layer boost",
+      "May temporarily plump the visual appearance of skin lines"
+    ],
+    "ingredients": [
+      "Hyaluronic Acid",
+      "Aqua",
+      "Glycerin"
+    ],
+    "risk_factors": [
+      "May feel sticky or insufficient alone in very dry climates"
+    ],
+    "contraindications": [],
+    "evidence_level": "high",
+    "requires_doctor_review": false,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_016",
+    "name": "DermaVow Vitamin C 20% Stabilized Serum",
+    "category": "skin_care",
+    "product_type": "serum",
+    "use_cases": [
+      "hyperpigmentation",
+      "dark spots",
+      "skin brightening"
+    ],
+    "description": "A high-potency 20% stabilized Vitamin C serum targeting localized discoloration and skin dullness.",
+    "claims": [
+      "May assist in fading visible dark spots",
+      "Helps brighten uneven hyperpigmentation marks",
+      "Delivers concentrated antioxidant defense"
+    ],
+    "ingredients": [
+      "Stabilized Vitamin C (20%)",
+      "Ferulic Acid",
+      "Vitamin E",
+      "Aqua"
+    ],
+    "risk_factors": [
+      "High strength formulation; can cause transient stinging, redness, or mild warmth upon application"
+    ],
+    "contraindications": [
+      "Do not use on actively broken, raw, or highly compromised skin barriers"
+    ],
+    "evidence_level": "medium",
+    "requires_doctor_review": true,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_017",
+    "name": "Clinikally HydraSoothe Moisturiser",
+    "category": "skin_care",
+    "product_type": "moisturizer",
+    "use_cases": [
+      "redness",
+      "skin irritation",
+      "barrier damage"
+    ],
+    "description": "A soothing, lightweight moisturizer built to calm skin irritation and maintain epidermal barrier comfort.",
+    "claims": [
+      "Helps soothe temporary skin redness",
+      "Provides comforting hydration to irritated skin profiles",
+      "Supports barrier resilience"
+    ],
+    "ingredients": [
+      "Aqua",
+      "Glycerin",
+      "Ceramides Complex",
+      "Allantoin"
+    ],
+    "risk_factors": [
+      "Avoid immediate area around the eyes"
+    ],
+    "contraindications": [],
+    "evidence_level": "medium",
+    "requires_doctor_review": false,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_018",
+    "name": "Clinikally Pigment Corrector Cream",
+    "category": "skin_care",
+    "product_type": "cream",
+    "use_cases": [
+      "hyperpigmentation",
+      "uneven skin tone",
+      "dark spots"
+    ],
+    "description": "A localized cosmetic skin cream targeting dark spots and regional complexion irregularities.",
+    "claims": [
+      "May reduce the visibility of stubborn dark spots",
+      "Assists in promoting a more even overall complexion tone"
+    ],
+    "ingredients": [
+      "Kojic Acid",
+      "Alpha Arbutin",
+      "Niacinamide",
+      "Aqua"
+    ],
+    "risk_factors": [
+      "Can cause mild sensitization to sunlight; mandatory daily broad-spectrum sunscreen use required"
+    ],
+    "contraindications": [],
+    "evidence_level": "medium",
+    "requires_doctor_review": false,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_019",
+    "name": "Clinikally SunProtect Sunscreen SPF 50/PA+++ (Twin Pack)",
+    "category": "skin_care",
+    "product_type": "sunscreen",
+    "use_cases": [
+      "sun protection",
+      "photo-aging prevention"
+    ],
+    "description": "A high-value twin bundle pack of the broad-spectrum non-comedogenic sunscreen.",
+    "claims": [
+      "Provides broad-spectrum UV protection",
+      "May assist in preventing sun-induced aging changes"
+    ],
+    "ingredients": [
+      "Aqua",
+      "Ethylhexyl Methoxycinnamate",
+      "Butyl Methoxydibenzoylmethane",
+      "Benzophenone-3",
+      "Ceramide 3",
+      "Camellia Sinensis Leaf Extract",
+      "Tocopheryl Acetate (Vitamin E)",
+      "InfraGuard"
+    ],
+    "risk_factors": [
+      "Contains Benzophenone-3",
+      "Requires regular reapplication every 2 hours under physical outdoor stress"
+    ],
+    "contraindications": [],
+    "evidence_level": "high",
+    "requires_doctor_review": false,
+    "source": "manual_catalogue"
+  },
+  {
+    "id": "prod_020",
+    "name": "Clinikally HydraSoft Gentle Skin Cleanser (Twin Pack)",
+    "category": "skin_care",
+    "product_type": "cleanser",
+    "use_cases": [
+      "daily cleansing",
+      "dry skin",
+      "sensitive skin irritation"
+    ],
+    "description": "A high-volume bundled twin pack of the gentle, non-stripping daily lotion cleanser.",
+    "claims": [
+      "May help cleanse without drying",
+      "May support skin barrier moisture levels during cleansing"
+    ],
+    "ingredients": [
+      "Aqua",
+      "Glycerin",
+      "Cetearyl Alcohol",
+      "Aloe Barbadensis (Aloe Vera) Extract",
+      "Niacinamide",
+      "Panthenol",
+      "Citric Acid"
+    ],
+    "risk_factors": [
+      "For external topical administration only"
+    ],
+    "contraindications": [],
+    "evidence_level": "medium",
+    "requires_doctor_review": false,
+    "source": "manual_catalogue"
+  }
+]
