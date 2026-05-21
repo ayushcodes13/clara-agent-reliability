@@ -9,7 +9,7 @@
 <br>
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](#)
-[![Demo Video](https://img.shields.io/badge/Demo-Video-4285F4?style=flat-square&logo=youtube)](#)
+[![Demo Video](https://img.shields.io/badge/Demo-Video-4285F4?style=flat-square&logo=youtube)](https://youtu.be/K3pfU-BcIXI)
 
 <br>
 
@@ -50,7 +50,7 @@ Run the demo locally to see the pipeline in action:
 python demo.py
 ```
 
-*(Insert demo video link here)*
+[Watch the demo video here](https://youtu.be/K3pfU-BcIXI)
 
 ### Example Output
 
