@@ -1,10 +1,12 @@
 <div align="center">
 
+<img src="assets/clara-mark.svg" alt="Clara project mark" width="72" height="72">
+
 # Clara Agent Reliability
 
-**A local CLI demo of safety gates for medical-adjacent product recommendations**
+**A local review workspace for safety gates in medical-adjacent product recommendations**
 
-Routes a query, searches a small product catalogue, checks product claims and risks, and holds recommendations for doctor review when the query or product requires it.
+Enter a query in the local browser workspace. Clara routes it, searches the checked-in product catalogue, shows grounded claims and risk flags, and holds recommendations for doctor review when its rules require it.
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/ayushcodes13/clara-agent-reliability)
 [![Demo video](https://img.shields.io/badge/Watch-Demo%20video-4285F4?style=flat-square&logo=youtube)](https://youtu.be/K3pfU-BcIXI)
@@ -29,27 +31,45 @@ Clara demonstrates a rule-based control layer that routes queries, retrieves cat
 
 The source illustration is also available as [`architecture.html`](architecture.html).
 
-## Run the demo
+## Run the local review workspace
 
-The project has no browser UI or API. Its end-to-end flow runs locally in the terminal and uses the checked-in JSON catalogue.
+Requires Python 3.9 or later. No packages or build step are needed. Start the stdlib server from the repository root:
 
 ```bash
-git clone https://github.com/ayushcodes13/clara-agent-reliability.git
-cd clara-agent-reliability
+python3 -m src.web_app --host 127.0.0.1 --port 8765
+```
+
+Open [http://127.0.0.1:8765](http://127.0.0.1:8765). Choose a sample query or enter your own, then inspect the route, product claims, risk factors, review hold, and expandable decision trace. Feedback is optional; submitting it appends the query, product ID, selection, and optional note to the ignored local file `data/feedback_log.csv`.
+
+The original command-line example remains available:
+
+```bash
 python3 demo.py
 ```
 
-The CLI was run successfully with Python 3.9.6. The demo prints two ordinary skincare queries and a pregnancy-related query that requires doctor review. It also appends a sample feedback row to `data/feedback_log.csv` each time it runs.
+It prints three fixed examples and appends a sample feedback row to `data/feedback_log.csv` each time it runs.
 
-Watch the [recorded demo](https://youtu.be/K3pfU-BcIXI). The architecture diagram and recording are the visual project artifacts; there are no screenshots of a live app because this repository does not include one.
+## Screenshots
+
+Captured from the running local UI. The mobile image was captured at a 390 × 844 CSS viewport using Playwright because Aside does not expose viewport resizing. Playwright CLI could not create its control socket on this FAT volume, so the installed Playwright runtime was used directly for that capture.
+
+| Review workspace | Results and decision trace |
+| --- | --- |
+| ![Clara query review workspace](output/playwright/clara-workspace.png) | ![Clara review result with doctor-review hold and trace](output/playwright/clara-review.png) |
+
+| Mobile workspace |
+| --- |
+| ![Clara mobile workspace](output/playwright/clara-mobile.png) |
+
+Watch the [recorded demo](https://youtu.be/K3pfU-BcIXI). The architecture diagram and these screenshots complement the running local interface.
 
 ## Run the focused regression checks
 
 ```bash
-python3 -m unittest test.test_safety_gate
+python3 -m unittest test.test_safety_gate test.test_web_app
 ```
 
-These checks cover the request-level doctor-review gate for allergy and child queries, and confirm that an ordinary sunscreen query remains ungated. Older files in `test/` are print-based examples, not an asserted full test suite.
+These checks cover the request-level doctor-review gate, local web endpoints, query validation, Host/Origin restrictions, security headers, and feedback writes through a mocked local logger. Older files in `test/` are print-based examples with import-time side effects, not an asserted full test suite; the focused command avoids those examples.
 
 ## What the demo demonstrates
 
@@ -59,16 +79,18 @@ These checks cover the request-level doctor-review gate for allergy and child qu
 - **Risk checks:** surfaces product risk factors and contraindications.
 - **Review gate:** holds all returned recommendations when the query routes to doctor review, or when a product-specific rule requires it.
 - **Trace:** returns route, retrieved product IDs, decisions, and pipeline steps with each result.
-- **Feedback log:** appends a sample review row to a local CSV file.
+- **Feedback log:** optionally appends a submitted review row to a local CSV file.
 
 ## Limits and deployment
 
 - This is a deterministic rules demo; it does not call a language model or use semantic retrieval.
 - The catalogue is small, local, and manually maintained.
 - Routing and risk checks rely on simple keyword rules and are not a substitute for clinical review.
-- There is no clinician integration, live product database, browser interface, or API.
+- The browser interface is a local prototype with a small HTTP API; it has no clinician integration, live product database, accounts, or remote service.
 - It is **not for real medical use**.
-- The core workflow is not deployed on Vercel: the repository provides a local command-line program and file-based data, not a web application or hosted API.
+- Do not enter identifying or sensitive health information. Queries are processed by the local Python process and are not logged by the server. Feedback you explicitly submit is stored on disk in the local CSV.
+- The interface has no authentication and is intended only for local use. The server refuses non-loopback bind addresses and checks local Host/Origin headers.
+- The interface can be deployed as a static Vercel preview for visual review, but the interactive review API requires the local Python server and catalogue. The current design has no Vercel Functions adapter and does not claim to be a hosted working demo.
 
 ## Possible next steps
 
