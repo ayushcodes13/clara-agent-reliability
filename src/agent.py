@@ -22,6 +22,16 @@ def run_agent(query, top_k=3):
         for p in retrieved_products
     ]
 
+    # A high-risk route is a request-level hold. Keep the gate attached to each
+    # recommendation so both the user response and trace reflect the decision.
+    if route["route"] == "doctor_review":
+        route_review_reason = f"Query routed to doctor review: {route['reason']}"
+        for recommendation in recommendations:
+            decision = recommendation["doctor_review"]
+            decision["requires_doctor_review"] = True
+            if route_review_reason not in decision["reasons"]:
+                decision["reasons"].append(route_review_reason)
+
     grounded_recommendations = []
 
     for recommendation in recommendations:
