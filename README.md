@@ -2,111 +2,80 @@
 
 # Clara Agent Reliability
 
-**Safety gates for medical-adjacent recommendation agents**
+**A local CLI demo of safety gates for medical-adjacent product recommendations**
 
-*A demo pipeline showing routing, grounded claims, risk checks, doctor-review gating, trace logging, and feedback logging.*
+Routes a query, searches a small product catalogue, checks product claims and risks, and holds recommendations for doctor review when the query or product requires it.
 
-<br>
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/ayushcodes13/clara-agent-reliability)
+[![Demo video](https://img.shields.io/badge/Watch-Demo%20video-4285F4?style=flat-square&logo=youtube)](https://youtu.be/K3pfU-BcIXI)
 
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=flat-square&logo=github)](#)
-[![Demo Video](https://img.shields.io/badge/Demo-Video-4285F4?style=flat-square&logo=youtube)](https://youtu.be/K3pfU-BcIXI)
-
-<br>
-
-![Python](https://img.shields.io/badge/Python-3.10+-blue)
-![Status](https://img.shields.io/badge/Status-Demo-orange)
-![Focus](https://img.shields.io/badge/Focus-Agent%20Reliability-green)
-![Safety](https://img.shields.io/badge/Safety-Doctor%20Review%20Gate-red)
+![Python 3.9 tested](https://img.shields.io/badge/Python-3.9%20tested-blue)
+![Project status](https://img.shields.io/badge/Status-Local%20demo-orange)
+![Safety gate](https://img.shields.io/badge/Review-Doctor%20gate-red)
 
 </div>
 
 ---
 
-## The Problem
+## Why this project exists
 
-In healthcare-adjacent domains, optimizing solely for **relevance** is risky. Standard language models and recommendation agents can match search terms to product descriptions, but they often ignore underlying medical safety constraints.
+A product can match a user's search terms and still be inappropriate for their context. For example, a pregnancy-related hair-loss query should not receive an ordinary product recommendation when the catalogue includes a pregnancy contraindication.
 
-For example, a query for **"pregnancy + hair fall"** should not return a direct product recommendation if the retrieved product has contraindications for pregnant users. Instead, it must trigger a safety review.
+Clara demonstrates a rule-based control layer that routes queries, retrieves catalogue entries, exposes only catalogue claims, checks risk rules, and builds a review-gated response. It is a demonstration of those mechanisms, not a healthcare service.
 
-This project implements a control layer that intercepts, evaluates, and gates agent responses before they ever reach the user.
+## Architecture
 
----
+![Clara pipeline architecture](assets/architecture.png)
 
-## Architecture Pipeline
+The source illustration is also available as [`architecture.html`](architecture.html).
 
-The system uses a sequential pipeline with built-in safety gates.
+## Run the demo
 
-<p align="center">
-  <img src="assets/architecture.png" alt="Pipeline Architecture" width="800" />
-</p>
-
----
-
-## Demo
-
-Run the demo locally to see the pipeline in action:
+The project has no browser UI or API. Its end-to-end flow runs locally in the terminal and uses the checked-in JSON catalogue.
 
 ```bash
-python demo.py
+git clone https://github.com/ayushcodes13/clara-agent-reliability.git
+cd clara-agent-reliability
+python3 demo.py
 ```
 
-[Watch the demo video here](https://youtu.be/K3pfU-BcIXI)
+The CLI was run successfully with Python 3.9.6. The demo prints two ordinary skincare queries and a pregnancy-related query that requires doctor review. It also appends a sample feedback row to `data/feedback_log.csv` each time it runs.
 
-### Example Output
+Watch the [recorded demo](https://youtu.be/K3pfU-BcIXI). The architecture diagram and recording are the visual project artifacts; there are no screenshots of a live app because this repository does not include one.
 
-```text
-USER QUERY: I am pregnant and facing hair fall
+## Run the focused regression checks
 
-ROUTE:
-{'route': 'doctor_review', 'reason': 'Query contains high-risk medical context'}
-
-USER RESPONSE:
-Clinikally Hair ReGrow Serum may match your concern, but doctor review is required before use.
-
-Doctor review reasons:
-- Product is marked as requiring doctor review
-- User query contains high-risk term: pregnant
-- Product contraindication matches user's pregnancy/nursing context
+```bash
+python3 -m unittest test.test_safety_gate
 ```
 
----
+These checks cover the request-level doctor-review gate for allergy and child queries, and confirm that an ordinary sunscreen query remains ungated. Older files in `test/` are print-based examples, not an asserted full test suite.
 
-## What It Demonstrates
+## What the demo demonstrates
 
-This demo showcases several key reliability mechanisms:
+- **Routing:** flags selected high-risk terms before retrieval.
+- **Catalogue retrieval:** ranks products from a small local JSON file using keyword rules.
+- **Grounded claims:** returns claims stored with each catalogue product.
+- **Risk checks:** surfaces product risk factors and contraindications.
+- **Review gate:** holds all returned recommendations when the query routes to doctor review, or when a product-specific rule requires it.
+- **Trace:** returns route, retrieved product IDs, decisions, and pipeline steps with each result.
+- **Feedback log:** appends a sample review row to a local CSV file.
 
-- **Query Routing:** Early detection of high-risk medical context.
-- **Product Retrieval:** Fetching based on allowed criteria.
-- **Grounded Claims:** Ensuring the system does not hallucinate product benefits.
-- **Risk Detection:** Checking product contraindications against user context.
-- **Doctor-Review Decision:** Automatically halting the flow if a safety threshold is breached.
-- **Trace Logging:** Full observability of the decision-making steps.
-- **Feedback Logging:** Storing outcomes for continuous evaluation.
+## Limits and deployment
 
----
+- This is a deterministic rules demo; it does not call a language model or use semantic retrieval.
+- The catalogue is small, local, and manually maintained.
+- Routing and risk checks rely on simple keyword rules and are not a substitute for clinical review.
+- There is no clinician integration, live product database, browser interface, or API.
+- It is **not for real medical use**.
+- The core workflow is not deployed on Vercel: the repository provides a local command-line program and file-based data, not a web application or hosted API.
 
-## Limitations
+## Possible next steps
 
-This is a focused reliability demo and is **not** a production healthcare system.
-
-- Manual catalogue only
-- Rule-based retrieval
-- No embeddings yet
-- No live product database
-- No real doctor integration
-- **Not for real medical use**
-
----
-
-## Future Work
-
-- [ ] Semantic retrieval
-- [ ] Larger product catalogue
-- [ ] Evaluation dataset
-- [ ] Review dashboard
-- [ ] Better safety test cases
+- Build an evaluation set for routing and review decisions.
+- Expand the catalogue and review product data sources.
+- Add a review dashboard or API only with a clearly scoped, tested use case.
 
 <div align="center">
-  <br>
-  <sub>Built for testing reliability, safety, and traceability in medical-adjacent recommendation agents.</sub>
+  <sub>A small project for exploring reliability, traceability, and safety gates in recommendation workflows.</sub>
 </div>
