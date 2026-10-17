@@ -90,7 +90,13 @@ These checks cover the request-level doctor-review gate, local web endpoints, qu
 - It is **not for real medical use**.
 - Do not enter identifying or sensitive health information. Queries are processed by the local Python process and are not logged by the server. Feedback you explicitly submit is stored on disk in the local CSV.
 - The interface has no authentication and is intended only for local use. The server refuses non-loopback bind addresses and checks local Host/Origin headers.
-- The interface can be deployed as a static Vercel preview for visual review, but the interactive review API requires the local Python server and catalogue. The current design has no Vercel Functions adapter and does not claim to be a hosted working demo.
+- The local browser interface has no Vercel Functions adapter and is not a hosted working demo.
+
+## Static portfolio presentation
+
+The [`site/`](site/) folder contains a static portfolio presentation built from the existing demo screenshots and project description. It is presentation-only: it does not accept or send queries or feedback. The query-review and feedback endpoints are available only when you run the Python server locally as described above. The screenshots show sample demo output and are not medical advice.
+
+The static presentation has not been deployed. To serve it as a static Vercel project, use the repository root as the project root, choose the **Other** framework preset, leave the build command blank, and set the output directory to `site`. This publishes only the presentation files; it does not deploy the interactive Python service. Add a public URL here only after a deployment has been completed and checked.
 
 ## Possible next steps
 
