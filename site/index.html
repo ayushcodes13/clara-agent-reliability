@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2ec">
+  <meta name="description" content="A static portfolio presentation of Clara Agent Reliability, a local rules-based review demo.">
+  <title>Clara Agent Reliability — Static Presentation</title>
+  <link rel="icon" href="assets/clara-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Clara Agent Reliability home">
+        <img src="assets/clara-mark.svg" alt="" width="36" height="36">
+        <span>clara</span>
+      </a>
+      <nav aria-label="Page navigation">
+        <a href="#approach">Approach</a>
+        <a href="#screens">Screens</a>
+        <a href="#limits">Limits</a>
+      </nav>
+      <a class="github-link" href="https://github.com/ayushcodes13/clara-agent-reliability">View repository <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-rule"></span> CLARA AGENT RELIABILITY</p>
+          <h1 id="hero-title">A review flow<br><em>you can follow.</em></h1>
+          <p class="lede">A local, rules-based demo for tracing how a product query moves through catalogue retrieval, claim and risk checks, and a doctor-review hold.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#approach">Explore the project <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="https://youtu.be/K3pfU-BcIXI">Watch the recorded demo <span aria-hidden="true">↗</span></a>
+          </div>
+          <aside class="static-notice" aria-label="Static presentation notice">
+            <span class="notice-mark" aria-hidden="true">i</span>
+            <div>
+              <strong>Static portfolio presentation</strong>
+              <p>This page does not accept or send queries or feedback. The interactive review requires the local Python server.</p>
+            </div>
+          </aside>
+          <div class="facts" aria-label="Demo facts">
+            <div><strong>20</strong><span>catalogue entries</span></div>
+            <div><strong>0</strong><span>model calls</span></div>
+            <div><strong>Local</strong><span>rule-based flow</span></div>
+          </div>
+        </div>
+        <figure class="hero-image image-frame">
+          <img src="assets/clara-workspace.png" alt="Screenshot of the local Clara review workspace with sample query chips, a blank query area, and the review-flow overview" width="2880" height="1800">
+          <figcaption><span>Local browser workspace</span><span>Captured from the running demo</span></figcaption>
+        </figure>
+      </section>
+
+      <section class="section approach-section" id="approach" aria-labelledby="approach-title">
+        <div class="section-heading">
+          <p class="eyebrow"><span class="eyebrow-rule"></span> THE APPROACH</p>
+          <h2 id="approach-title">Make each step visible.</h2>
+          <p class="section-intro">Clara demonstrates a small control layer around a manually maintained product catalogue. It is a project demo, not a healthcare service.</p>
+        </div>
+        <div class="approach-grid">
+          <article class="approach-card"><span class="card-index">01</span><h3>Route</h3><p>Rule-based checks classify the query and flag selected high-risk terms.</p></article>
+          <article class="approach-card"><span class="card-index">02</span><h3>Retrieve</h3><p>Keyword matching ranks products from the checked-in JSON catalogue.</p></article>
+          <article class="approach-card"><span class="card-index">03</span><h3>Ground and check</h3><p>Catalogue claims, risk factors, and contraindications are surfaced with each result.</p></article>
+          <article class="approach-card decision-card"><span class="card-index">04</span><h3>Hold and trace</h3><p>When a rule requires review, the result shows the hold and the recorded decision path.</p></article>
+        </div>
+      </section>
+
+      <section class="section screenshots-section" id="screens" aria-labelledby="screens-title">
+        <div class="section-heading screenshots-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-rule"></span> FROM THE LOCAL DEMO</p>
+            <h2 id="screens-title">A decision with its context.</h2>
+          </div>
+          <p class="section-intro">These existing screenshots show the local interface and a sample review result. They are static images; this presentation does not run that workflow.</p>
+        </div>
+        <figure class="review-figure image-frame">
+          <img src="assets/clara-review.png" alt="Existing screenshot of a sample query held for doctor review, with catalogue claims, risk factors, and the decision trace" width="2880" height="1800" loading="lazy">
+          <figcaption><span>Sample review output</span><span>Illustrative rules-based demo result · not medical advice</span></figcaption>
+        </figure>
+        <div class="mobile-row">
+          <figure class="mobile-figure image-frame">
+            <img src="assets/clara-mobile.png" alt="Existing narrow-screen screenshot of the local Clara workspace" width="390" height="1526" loading="lazy">
+          </figure>
+          <div class="mobile-caption">
+            <p class="eyebrow"><span class="eyebrow-rule"></span> RESPONSIVE LOCAL UI</p>
+            <h3>The workspace also adapts to a narrow screen.</h3>
+            <p>The screenshot is from the existing local interface. The static presentation remains read-only at every viewport.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="local-run" aria-labelledby="local-run-title">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-rule"></span> WANT TO RUN IT?</p>
+          <h2 id="local-run-title">Start the interactive demo locally.</h2>
+          <p>The Python server provides the query-review and optional feedback endpoints on your own machine. This hosted presentation does not provide either endpoint.</p>
+        </div>
+        <div class="run-details">
+          <p>From the repository root · Python 3.9+</p>
+          <pre><code>python3 -m src.web_app --host 127.0.0.1 --port 8765</code></pre>
+          <a class="text-link" href="https://github.com/ayushcodes13/clara-agent-reliability#run-the-local-review-workspace">Read the full setup instructions <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="limits" id="limits" aria-labelledby="limits-title">
+        <div class="limits-heading">
+          <p class="eyebrow"><span class="eyebrow-rule"></span> SCOPE AND LIMITS</p>
+          <h2 id="limits-title">A prototype with clear boundaries.</h2>
+        </div>
+        <ul>
+          <li>Deterministic keyword rules; no language-model calls or semantic retrieval.</li>
+          <li>Small, local catalogue with manually maintained product data.</li>
+          <li>No clinician integration, live product database, or remote service.</li>
+          <li>Not for real medical use. The sample output is only a demonstration of the project rules.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#top"><img src="assets/clara-mark.svg" alt="" width="28" height="28"><span>clara</span></a>
+      <span>Static project presentation · no query or feedback submission</span>
+      <a href="https://github.com/ayushcodes13/clara-agent-reliability">Source on GitHub <span aria-hidden="true">↗</span></a>
+    </footer>
+  </div>
+</body>
+</html>
