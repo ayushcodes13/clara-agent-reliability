@@ -96,7 +96,7 @@ These checks cover the request-level doctor-review gate, local web endpoints, qu
 
 The [`site/`](site/) folder contains a static portfolio presentation built from the existing demo screenshots and project description. It is presentation-only: it does not accept or send queries or feedback. The query-review and feedback endpoints are available only when you run the Python server locally as described above. The screenshots show sample demo output and are not medical advice.
 
-The static presentation has not been deployed. To serve it as a static Vercel project, use the repository root as the project root, choose the **Other** framework preset, leave the build command blank, and set the output directory to `site`. This publishes only the presentation files; it does not deploy the interactive Python service. Add a public URL here only after a deployment has been completed and checked.
+Production static presentation: [clara-agent-reliability.devayushrout.me](https://clara-agent-reliability.devayushrout.me) (Vercel; project root `site`, framework preset **Other**, no build command). It publishes only the presentation files; the interactive Python service remains local and the hosted page does not accept queries or feedback.
 
 ## Possible next steps
 
